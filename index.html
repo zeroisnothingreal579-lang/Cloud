@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stratus — Cloud Phones | Real Android in the Cloud</title>
+<meta name="description" content="Rent real cloud Android phones in seconds. Stream apps, games and automation from 8 global regions." />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236366f1'/%3E%3Crect x='10' y='5' width='12' height='22' rx='3' fill='white'/%3E%3Crect x='12' y='8' width='8' height='14' rx='1' fill='%236366f1'/%3E%3C/svg%3E" />
+</head>
+<body>
+<header class="nav" id="top">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Stratus home">
+      <span class="brand-mark" aria-hidden="true"><span class="brand-phone"></span></span>
+      <span class="brand-name">Stratus<em>Cloud Phones</em></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#catalog">Phones</a>
+      <a href="#how">How it works</a>
+      <a href="#fleet">My fleet</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <span class="live-dot" title="All regions operational"><i></i>8 regions live</span>
+      <button class="btn btn-primary btn-sm" data-action="scroll-launch">Launch a phone</button>
+    </div>
+    <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#catalog">Phones</a>
+    <a href="#how">How it works</a>
+    <a href="#fleet">My fleet</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <button class="btn btn-primary" data-action="scroll-launch">Launch a phone</button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> Real Android hardware · streamed to your browser</p>
+        <h1>Cloud phones that feel like <span class="grad">the real thing.</span></h1>
+        <p class="lede">Spin up a dedicated Android phone in the cloud in under 30 seconds. Play games, run apps 24/7, automate accounts and test builds — from any device, anywhere.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg" data-action="scroll-launch">Launch your first phone — free</button>
+          <button class="btn btn-ghost btn-lg" id="tryDemoBtn">Try live demo</button>
+        </div>
+        <dl class="hero-stats">
+          <div><dt>42k+</dt><dd>phones running now</dd></div>
+          <div><dt>30s</dt><dd>median launch time</dd></div>
+          <div><dt>99.95%</dt><dd>fleet uptime</dd></div>
+          <div><dt>8</dt><dd>global regions</dd></div>
+        </dl>
+      </div>
+      <div class="hero-visual">
+        <div class="orbit orbit-a" aria-hidden="true"></div>
+        <div class="orbit orbit-b" aria-hidden="true"></div>
+        <div class="phone-shell hero-phone" aria-label="Preview of a Stratus cloud phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen" id="heroScreen">
+            <div class="p-status"><span id="heroClock">09:41</span><span class="p-icons">5G ▂▄▆ 100%</span></div>
+            <p class="p-hello">Good afternoon ☁️</p>
+            <div class="p-search">Search apps &amp; games</div>
+            <div class="p-grid" id="heroGrid"></div>
+            <div class="p-dock" id="heroDock"></div>
+          </div>
+          <div class="phone-side"></div>
+        </div>
+        <div class="float-card float-a">
+          <strong id="floatUptime">99.95% uptime</strong><span>Frankfurt · Pixel 9 Pro</span>
+          <div class="meter"><i style="width:96%"></i></div>
+        </div>
+        <div class="float-card float-b">
+          <strong>24/7 farming</strong><span>3 games idle · 214 MB/h</span>
+          <div class="meter"><i style="width:64%"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap trust-strip">
+      <span>Trusted by indie devs, gaming guilds &amp; QA teams</span>
+      <div class="trust-logos" aria-hidden="true">
+        <b>PIXELFORGE</b><b>Questline</b><b>AppVerify</b><b>GAMMA&nbsp;LABS</b><b>Botanic</b>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOG -->
+  <section class="section" id="catalog">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Device catalog</p>
+          <h2>Pick your cloud phone</h2>
+          <p class="sub">Every phone is a dedicated instance with its own Android ID, storage and IP egress. No sharing, no throttling.</p>
+        </div>
+        <div class="filters" role="tablist" aria-label="Filter by tier">
+          <button class="chip active" data-tier="all" role="tab" aria-selected="true">All</button>
+          <button class="chip" data-tier="lite" role="tab" aria-selected="false">Lite</button>
+          <button class="chip" data-tier="pro" role="tab" aria-selected="false">Pro</button>
+          <button class="chip" data-tier="ultra" role="tab" aria-selected="false">Ultra</button>
+        </div>
+      </div>
+      <div class="search-row">
+        <input id="catalogSearch" type="search" placeholder="Search devices, chips, use cases… (e.g. gaming)" aria-label="Search devices" />
+        <select id="regionPick" aria-label="Preferred region">
+          <option value="auto">Nearest region (auto)</option>
+          <option>Frankfurt</option><option>Virginia</option><option>Singapore</option>
+          <option>Tokyo</option><option>São Paulo</option><option>Mumbai</option>
+          <option>Oregon</option><option>London</option>
+        </select>
+      </div>
+      <div class="cards" id="catalogGrid"></div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section class="section alt" id="how">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2>From click to cloud phone in 3 steps</h2>
+      <div class="steps">
+        <div class="step"><span class="step-n">1</span><h3>Choose a device &amp; region</h3><p>Pick from Lite to Ultra hardware and the region closest to you for sub-40&nbsp;ms streaming.</p></div>
+        <div class="step"><span class="step-n">2</span><h3>We provision your phone</h3><p>A dedicated Android instance boots with a fresh device ID, Play-ready image and private storage.</p></div>
+        <div class="step"><span class="step-n">3</span><h3>Stream &amp; control</h3><p>Use it right here in the browser, via ADB, or our API. It keeps running 24/7 — even with your laptop closed.</p></div>
+      </div>
+      <div class="code-strip">
+        <div class="code-card">
+          <p class="code-title">Automate with ADB over TLS</p>
+<pre><code>stratus devices:list
+stratus shell phone-8f2k -- "am start -n com.game/.Main"
+stratus adb phone-8f2k install build.apk</code></pre>
+        </div>
+        <div class="code-card">
+          <p class="code-title">Or drive it from the API</p>
+<pre><code>curl -X POST https://api.stratus.cloud/v1/phones \
+  -H "Authorization: Bearer $KEY" \
+  -d '{"model":"pixel-9-pro","region":"fra"}'</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLEET -->
+  <section class="section" id="fleet">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Live dashboard</p>
+          <h2>My cloud fleet</h2>
+          <p class="sub">Your instances live here. Launch, open, reboot or terminate — everything updates in real time and persists locally.</p>
+        </div>
+        <button class="btn btn-primary" data-action="scroll-launch">+ New phone</button>
+      </div>
+      <div class="fleet-layout">
+        <div class="fleet-list" id="fleetList"></div>
+        <aside class="metrics" aria-label="Live metrics">
+          <h3>Live metrics <span class="live-dot"><i></i><span id="metricsTarget">—</span></span></h3>
+          <div class="metric"><div class="metric-row"><span>CPU</span><b id="mCpuV">0%</b></div><div class="bar"><i id="mCpu"></i></div></div>
+          <div class="metric"><div class="metric-row"><span>Memory</span><b id="mMemV">0%</b></div><div class="bar"><i id="mMem"></i></div></div>
+          <div class="metric"><div class="metric-row"><span>Network</span><b id="mNetV">0 Mb/s</b></div><div class="bar"><i id="mNet"></i></div></div>
+          <div class="metric"><div class="metric-row"><span>Battery (virtual)</span><b id="mBatV">100%</b></div><div class="bar"><i id="mBat"></i></div></div>
+          <ul class="metric-log" id="metricLog" aria-live="polite"></ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section alt" id="pricing">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Pricing</p>
+          <h2>Pay per hour, or go monthly</h2>
+          <p class="sub">First 2 hours on any device are free. Cancel anytime — storage snapshots stay for 30 days.</p>
+        </div>
+        <div class="billing-toggle" role="tablist" aria-label="Billing period">
+          <button class="chip active" id="billHourly" role="tab" aria-selected="true">Hourly</button>
+          <button class="chip" id="billMonthly" role="tab" aria-selected="false">Monthly · −30%</button>
+        </div>
+      </div>
+      <div class="cards three" id="pricingGrid"></div>
+      <p class="fine">All plans include unlimited streaming, 24/7 uptime, ADB + API access, root toggle and 50 GB snapshots. Bandwidth fair-use: 2 TB/mo.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap narrow">
+      <p class="eyebrow">FAQ</p>
+      <h2>Questions, answered</h2>
+      <div class="faq" id="faqList">
+        <details open><summary>Is this a real phone or an emulator?</summary><p>A real, dedicated Android instance running on server-grade hardware with ARM virtualization — not a shared emulator. It has its own device ID, IMEI-range identifier, storage and network egress.</p></details>
+        <details><summary>Do my phones keep running when I close the browser?</summary><p>Yes. Streaming disconnects, but the instance keeps running 24/7 — games farm, scripts run, builds install. Reconnect anytime and pick up exactly where you left off.</p></details>
+        <details><summary>Can I install any APK or use the Play Store?</summary><p>Yes. Upload APKs directly, use the built-in store, or push builds over ADB. Google Mobile Services images are available on Pro and Ultra tiers.</p></details>
+        <details><summary>How many phones can I run at once?</summary><p>Up to 50 per account on self-serve, thousands via enterprise contracts. Multi-control lets you mirror touches to the whole fleet at once.</p></details>
+        <details><summary>Is it allowed for games and automation?</summary><p>Yes for your own accounts and testing. You must still respect each app's terms of service — we provide the hardware, you own the behavior.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta wrap">
+    <div class="cta-card">
+      <div>
+        <h2>Your first 2 hours are free.</h2>
+        <p>No credit card. A Pixel 9 Pro is waiting in Frankfurt right now.</p>
+      </div>
+      <button class="btn btn-light btn-lg" data-action="scroll-launch">Claim free hours</button>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap foot-grid">
+    <div>
+      <span class="brand-name">Stratus<em>Cloud Phones</em></span>
+      <p>Real Android phones in the cloud. Stream, farm, test and automate — 24/7.</p>
+      <p class="fine">Demo project · data persists in your browser only.</p>
+    </div>
+    <nav aria-label="Footer"><a href="#catalog">Phones</a><a href="#pricing">Pricing</a><a href="#fleet">My fleet</a><a href="#faq">FAQ</a></nav>
+    <div class="foot-status"><span class="live-dot"><i></i>All systems operational</span><span id="footClock"></span></div>
+  </div>
+</footer>
+
+<!-- LAUNCH MODAL -->
+<div class="overlay" id="launchOverlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="launchTitle">
+    <button class="x" data-close aria-label="Close">✕</button>
+    <h3 id="launchTitle">Launch a cloud phone</h3>
+    <p class="sub" id="launchSub">Configure your instance. Provisioning takes ~30 seconds.</p>
+    <label>Device<input type="hidden" id="launchDevice" /></label>
+    <div class="pick-list" id="launchDevices"></div>
+    <div class="form-grid">
+      <label>Region
+        <select id="launchRegion">
+          <option>Frankfurt</option><option>London</option><option>Virginia</option><option>Oregon</option>
+          <option>Singapore</option><option>Tokyo</option><option>Mumbai</option><option>São Paulo</option>
+        </select>
+      </label>
+      <label>Plan
+        <select id="launchPlan"><option value="hourly">Hourly · flexible</option><option value="monthly">Monthly · −30%</option></select>
+      </label>
+      <label>Android image
+        <select id="launchImage"><option>Android 15 · GMS</option><option>Android 14 · GMS</option><option>Android 14 · AOSP (root)</option></select>
+      </label>
+      <label>Phone name
+        <input id="launchName" maxlength="24" placeholder="e.g. farm-01" />
+      </label>
+    </div>
+    <div class="modal-foot">
+      <div class="price-line"><span>Estimated</span><strong id="launchPrice">$0.09/hr</strong></div>
+      <button class="btn btn-primary btn-lg" id="confirmLaunch">Provision phone</button>
+    </div>
+  </div>
+</div>
+
+<!-- EMULATOR MODAL -->
+<div class="overlay" id="emuOverlay" aria-hidden="true">
+  <div class="emu-wrap" role="dialog" aria-modal="true" aria-labelledby="emuTitle">
+    <button class="x light" data-close aria-label="Close">✕</button>
+    <div class="emu-side">
+      <h3 id="emuTitle">Phone</h3>
+      <p class="sub" id="emuSub">region · plan</p>
+      <div class="emu-actions">
+        <button class="btn btn-ghost btn-sm" id="emuReboot">Reboot</button>
+        <button class="btn btn-ghost btn-sm" id="emuShot">Screenshot</button>
+        <button class="btn btn-danger btn-sm" id="emuStop">Stop</button>
+      </div>
+      <div class="emu-keys">
+        <p>Multi-control broadcast</p>
+        <label class="switch"><input type="checkbox" id="emuMirror" /><span></span> Mirror touches to fleet</label>
+      </div>
+      <ul class="emu-log" id="emuLog" aria-live="polite"></ul>
+    </div>
+    <div class="phone-shell emu-phone">
+      <div class="phone-notch"></div>
+      <div class="phone-screen" id="emuScreen">
+        <div class="p-status"><span id="emuClock">09:41</span><span id="emuNet">5G ▂▄▆ ●</span></div>
+        <div class="emu-boot" id="emuBoot" hidden>
+          <div class="spinner"></div><p>Booting Android…</p>
+        </div>
+        <div class="emu-home" id="emuHome">
+          <p class="p-hello" id="emuHello">Good afternoon ☁️</p>
+          <div class="p-search">Search apps &amp; games</div>
+          <div class="p-grid" id="emuGrid"></div>
+          <div class="p-dock" id="emuDock"></div>
+        </div>
+        <div class="emu-app" id="emuApp" hidden>
+          <div class="emu-appbar"><button id="emuBack" aria-label="Back">‹</button><strong id="emuAppTitle">App</strong></div>
+          <div class="emu-appbody" id="emuAppBody"></div>
+        </div>
+        <div class="emu-toast" id="emuToast" hidden></div>
+      </div>
+      <div class="phone-side"></div>
+    </div>
+  </div>
+</div>
+
+<div class="toast-stack" id="toasts" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
