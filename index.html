@@ -275,28 +275,13 @@ stratus adb phone-8f2k install build.apk</code></pre>
       <div class="emu-keys">
         <p>Multi-control broadcast</p>
         <label class="switch"><input type="checkbox" id="emuMirror" /><span></span> Mirror touches to fleet</label>
+        <p class="hint">The browser loads real pages over the network. Camera asks for your webcam. Everything else runs on the phone and persists.</p>
       </div>
       <ul class="emu-log" id="emuLog" aria-live="polite"></ul>
     </div>
     <div class="phone-shell emu-phone">
       <div class="phone-notch"></div>
-      <div class="phone-screen" id="emuScreen">
-        <div class="p-status"><span id="emuClock">09:41</span><span id="emuNet">5G ▂▄▆ ●</span></div>
-        <div class="emu-boot" id="emuBoot" hidden>
-          <div class="spinner"></div><p>Booting Android…</p>
-        </div>
-        <div class="emu-home" id="emuHome">
-          <p class="p-hello" id="emuHello">Good afternoon ☁️</p>
-          <div class="p-search">Search apps &amp; games</div>
-          <div class="p-grid" id="emuGrid"></div>
-          <div class="p-dock" id="emuDock"></div>
-        </div>
-        <div class="emu-app" id="emuApp" hidden>
-          <div class="emu-appbar"><button id="emuBack" aria-label="Back">‹</button><strong id="emuAppTitle">App</strong></div>
-          <div class="emu-appbody" id="emuAppBody"></div>
-        </div>
-        <div class="emu-toast" id="emuToast" hidden></div>
-      </div>
+      <div class="phone-screen os-screen" id="emuScreen"></div>
       <div class="phone-side"></div>
     </div>
   </div>
